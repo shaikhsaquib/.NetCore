@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StudentManagement.Dtos;
 using StudentManagement.Services;
@@ -5,6 +6,7 @@ using StudentManagement.Services;
 namespace StudentManagement.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("api/students")]
 public sealed class StudentsController : ControllerBase
 {
