@@ -10,6 +10,12 @@ This repository contains a monolithic ASP.NET Core Web API for managing students
 - `Dtos/` contains request/response contracts.
 
 ## Running (requires .NET 8 SDK)
+Restore packages before the first build:
+```bash
+dotnet restore src/StudentManagement/StudentManagement.csproj
+```
+
+Run the API:
 ```bash
 dotnet run --project src/StudentManagement/StudentManagement.csproj
 ```
