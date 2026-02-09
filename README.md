@@ -20,6 +20,19 @@ Run the API:
 dotnet run --project src/StudentManagement/StudentManagement.csproj
 ```
 
+## Authentication (JWT)
+Configure the JWT settings in `src/StudentManagement/appsettings.json` before running.
+
+### Auth Endpoints
+- `POST /api/auth/signup` (body: `{ "email": "...", "password": "..." }`)
+- `POST /api/auth/login` (body: `{ "email": "...", "password": "..." }`)
+
+### Using the token
+Include the token in requests to protected endpoints:
+```
+Authorization: Bearer {token}
+```
+
 ## API Endpoints
 - `GET /api/students`
 - `GET /api/students/{id}`
